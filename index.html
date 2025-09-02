@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamdan Saddique | Portfolio</title>
+  <style>
+    /* Rainbow Animated Background */
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      overflow-x: hidden;
+      background: linear-gradient(270deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
+      background-size: 1400% 1400%;
+      animation: rainbowBG 20s ease infinite;
+    }
+
+    @keyframes rainbowBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    header {
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 3em;
+      font-weight: bold;
+      text-shadow: 0 0 20px cyan, 0 0 40px magenta;
+    }
+
+    header p {
+      font-size: 1.3em;
+      font-style: italic;
+      color: #f0f0f0;
+    }
+
+    /* Profile Card 3D */
+    .profile-card {
+      width: 250px;
+      height: 320px;
+      margin: 30px auto;
+      perspective: 1000px;
+    }
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.9s;
+      transform-style: preserve-3d;
+    }
+    .profile-card:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+    }
+    .card-front {
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .card-front img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin-bottom: 15px;
+    }
+    .card-back {
+      background: rgba(0,0,0,0.6);
+      transform: rotateY(180deg);
+      padding: 20px;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      text-shadow: 0 0 15px #fff, 0 0 30px #0ff;
+    }
+
+    /* Skills Grid */
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .skill-box {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.3);
+      transition: transform 0.4s;
+    }
+    .skill-box:hover {
+      transform: scale(1.1) rotate(-2deg);
+      background: rgba(0,0,0,0.4);
+    }
+
+    /* Project Flip Cards */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .project-card {
+      width: 250px;
+      height: 180px;
+      perspective: 1000px;
+    }
+    .project-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .project-card:hover .project-inner {
+      transform: rotateY(180deg);
+    }
+    .project-front, .project-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    }
+    .project-front {
+      background-size: cover;
+      background-position: center;
+    }
+    .project-back {
+      background: rgba(0,0,0,0.7);
+      transform: rotateY(180deg);
+      padding: 15px;
+    }
+
+    /* Contact */
+    .contact {
+      background: rgba(0,0,0,0.6);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px cyan;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Muhammad Hamdan Saddique</h1>
+    <p>Artificial Intelligence Student | Programmer | Cyber Security Enthusiast</p>
+  </header>
+
+  <!-- Profile Card -->
+  <div class="profile-card">
+    <div class="card-inner">
+      <div class="card-front">
+        <img src="myimage.jpg" alt="Hamdan Profile">
+        <h3>Hamdan Saddique</h3>
+      </div>
+      <div class="card-back">
+        <p>BS Artificial Intelligence Student</p>
+        <p>Passionate about AI, Cyber Security & Web Development.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section>
+    <h2>About Me</h2>
+    <p>I am Hamdan Saddique, a BS Artificial Intelligence student and a passionate programmer with expertise in Cyber Security, AI, and Web Development. I love creating futuristic digital solutions.</p>
+  </section>
+
+  <!-- Skills -->
+  <section>
+    <h2>Skills & Expertise</h2>
+    <div class="skills">
+      <div class="skill-box">🤖 Artificial Intelligence (AI, ML, DL)</div>
+      <div class="skill-box">🔐 Cyber Security (Ethical Hacking, Network Security)</div>
+      <div class="skill-box">🌐 Web Development (HTML, CSS, JS, Python, Backend)</div>
+      <div class="skill-box">💻 Programming (C++, Python, JavaScript)</div>
+      <div class="skill-box">⚡ Communication & Problem Solving</div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <div class="project-inner">
+          <div class="project-front" style="background-image:url('project1.jpg');"></div>
+          <div class="project-back">
+            <h3>Portfolio Website</h3>
+            <p>Responsive animated portfolio showcasing my skills.</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-inner">
+          <div class="project-front" style="background-image:url('project2.jpg');"></div>
+          <div class="project-back">
+            <h3>AI Smart Saver</h3>
+            <p>AI-powered energy-saving system.</p>
+          </div>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-inner">
+          <div class="project-front" style="background-image:url('project3.jpg');"></div>
+          <div class="project-back">
+            <h3>Cyber Security Tool</h3>
+            <p>Security project for data protection.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section>
+    <h2>Contact</h2>
+    <div class="contact">
+      <p>📍 Rahim Yar Khan, Pakistan</p>
+      <p>📱 03327330518</p>
+      <p>📧 hamdansaddique0@gmail.com</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Hamdan Saddique | Designed with ❤️ & Rainbow Colors</p>
+  </footer>
+
+</body>
+</html>
